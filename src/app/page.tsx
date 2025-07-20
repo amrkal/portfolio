@@ -23,7 +23,7 @@ export default function Home() {
             <Link href="https://linkedin.com/in/amrkal" className="hover:underline">LinkedIn</Link>
             <Link href="/Amr_Kalany_CV.pdf" className="hover:underline">Resume</Link>
             <Link href="https://leetcode.com/amrkal" className="hover:underline">LeetCode</Link>
-            <Link href="https://www.hackerrank.com/amrkal" className="hover:underline">HackerRank</Link>
+            <Link href="https://www.hackerrank.com/kalany" className="hover:underline">HackerRank</Link>
           </div>
         </header>
 
