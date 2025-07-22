@@ -3,7 +3,24 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-export default function Home() {
+async function getGitHubRepos(): Promise<any[]> {
+  const res = await fetch('https://api.github.com/users/amrkal/repos', {
+    headers: {
+      Accept: 'application/vnd.github+json',
+    },
+    next: { revalidate: 86400 },
+  });
+  const repos: any[] = await res.json();
+
+  return repos
+    .filter((repo: any) => !repo.fork && repo.description)
+    .sort((a: any, b: any) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
+    .slice(0, 6);
+}
+
+export default async function Home() {
+  const dynamicRepos = await getGitHubRepos();
+
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
       <Head>
@@ -89,6 +106,19 @@ export default function Home() {
         </section>
 
         <section className="mb-16">
+          <h2 className="text-2xl font-semibold mb-4">Latest GitHub Projects</h2>
+          <div className="space-y-8">
+            {dynamicRepos.map((repo: any) => (
+              <div key={repo.id} className="border p-4 rounded-lg shadow-sm">
+                <h3 className="text-xl font-bold">{repo.name}</h3>
+                <p className="text-gray-700">{repo.description}</p>
+                <a href={repo.html_url} className="text-blue-600 hover:underline mt-2 block">View on GitHub</a>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-4">Skills Snapshot</h2>
           <ul className="grid grid-cols-2 md:grid-cols-3 gap-2 text-gray-700 list-disc list-inside">
             <li>C/C++, Embedded Systems</li>
@@ -107,5 +137,5 @@ export default function Home() {
         </footer>
       </main>
     </div>
-  )
+  );
 }
