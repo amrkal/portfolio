@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 async function getGitHubRepos(): Promise<any[]> {
-  const res = await fetch('https://api.github.com/users/amrkal/repos', {
+  const res = await fetch('https://api.github.com/users/amrkal/repos?sort=created&direction=desc', {
     headers: {
       Accept: 'application/vnd.github+json',
     },
@@ -14,7 +14,6 @@ async function getGitHubRepos(): Promise<any[]> {
 
   return repos
     .filter((repo: any) => !repo.fork && repo.description)
-    .sort((a: any, b: any) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
     .slice(0, 6);
 }
 
