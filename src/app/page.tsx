@@ -45,7 +45,7 @@ export default function Home() {
       <aside className="w-64 fixed h-screen bg-neutral-900 text-white px-6 py-10 flex flex-col items-center justify-between shadow-md">
         <div className="flex flex-col items-center space-y-4">
           <Image
-            src="/hero.png"
+            src="/profile.jpg"
             alt="Profile"
             width={96}
             height={96}
@@ -87,7 +87,7 @@ export default function Home() {
         {/* Hero Image */}
 <div className="relative w-full h-[300px] md:h-[400px]">
   <Image
-    src="/hero.jpg"
+    src="/profile.jpg"
     alt="Hero"
     width={1920}
     height={400}
