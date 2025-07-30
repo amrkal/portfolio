@@ -9,76 +9,84 @@ const username = 'amrkal';
 
 const featuredProjects = [
   {
+    name: 'portfolio',
+    image: '/placeholder.png',
+    description: 'My personal portfolio website built with Next.js and Tailwind CSS.',
+    tech: ['TypeScript', 'Next.js', 'Tailwind'],
+    github: 'https://github.com/amrkal/portfolio',
+  },
+  {
+    name: 'WorldAppTrivia',
+    image: '/placeholder.png',
+    description: 'Mobile trivia game built with Flutter and Dart, featuring multiple categories.',
+    tech: ['Dart', 'Flutter'],
+    github: 'https://github.com/amrkal/WorldAppTrivia',
+  },
+  {
+    name: 'job-mail-tracker',
+    image: '/placeholder.png',
+    description: 'Python tool to parse job-related emails and track application metadata in Excel.',
+    tech: ['Python'],
+    github: 'https://github.com/amrkal/job-mail-tracker',
+  },
+  {
+    name: 'ai-code-reviewer',
+    image: '/placeholder.png',
+    description: 'AI-powered GitHub code reviewer that analyzes repos using GPT and shows side-by-side diffs.',
+    tech: ['Python', 'React'],
+    github: 'https://github.com/amrkal/ai-code-reviewer',
+  },
+  {
+    name: 'PowerTrack',
+    image: '/placeholder.png',
+    description: 'Final year project for order and inventory management, including admin control panel.',
+    tech: ['TypeScript', 'React'],
+    github: '', // You can link if made public
+  },
+  {
     name: 'AdminPanelApp',
     image: '/placeholder.png',
-    description: 'Private admin dashboard built with TypeScript.',
+    description: 'Private admin dashboard for managing orders and inventory, built with TypeScript.',
     tech: ['TypeScript'],
     github: '',
   },
   {
     name: 'ElysianSoftech',
     image: '/placeholder.png',
-    description: 'Frontend for court booking built with JavaScript.',
+    description: 'Authentication system with login and registration built using JavaScript.',
     tech: ['JavaScript'],
     github: 'https://github.com/amrkal/ElysianSoftech',
   },
   {
-    name: 'BACKEND',
-    image: '/placeholder.png',
-    description: 'Private backend built with Python.',
-    tech: ['Python'],
-    github: '',
-  },
-  {
-    name: 'elysian-tech',
-    image: '/placeholder.png',
-    description: 'Court management system (repo description not provided).',
-    tech: ['JavaScript'],
-    github: 'https://github.com/amrkal/elysian-tech',
-  },
-  {
     name: 'AdminPowerTrackApp',
     image: '/placeholder.png',
-    description: 'Private admin interface for power tracking.',
+    description: 'Admin interface for the PowerTrack system, used for inventory and order management.',
     tech: ['TypeScript'],
     github: '',
   },
   {
     name: 'TennisCourt-BackEnd',
     image: '/placeholder.png',
-    description: 'Backend service for tennis court booking.',
+    description: 'Python-based backend API for managing tennis court reservations and user data.',
     tech: ['Python'],
     github: 'https://github.com/amrkal/TennisCourt-BackEnd',
   },
   {
     name: 'TennisCourt-FrontEnd',
     image: '/placeholder.png',
-    description: 'Frontend for tennis court booking system.',
+    description: 'React frontend for booking and managing tennis court reservations.',
     tech: ['JavaScript'],
     github: 'https://github.com/amrkal/TennisCourt-FrontEnd',
   },
   {
-    name: 'TennisCourt',
-    image: '/placeholder.png',
-    description: 'Full-stack tennis court booking system.',
-    tech: ['Python'],
-    github: 'https://github.com/amrkal/TennisCourt',
-  },
-  {
-    name: 'newRepo',
-    image: '/placeholder.png',
-    description: 'Java-based experimental project.',
-    tech: ['Java'],
-    github: 'https://github.com/amrkal/newRepo',
-  },
-  {
     name: 'Braude-Mid-Project',
     image: '/placeholder.png',
-    description: 'Forked flower shop project from Software Engineering course.',
+    description: 'Flower shop management system built in Java as part of a university software engineering project.',
     tech: ['Java'],
     github: 'https://github.com/amrkal/Braude-Mid-Project',
   },
 ];
+
 
 export default function Projects() {
   const [githubRepos, setGithubRepos] = useState<any[]>([]);
