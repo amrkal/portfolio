@@ -85,22 +85,22 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-1 ml-64">
         {/* Hero Image */}
-<div className="relative w-full h-[300px] md:h-[400px]">
+<div className="relative w-full h-[1000px] md:h-[1000px] overflow-hidden">
   <Image
     src="/profile.jpg"
     alt="Hero"
-    width={1920}
-    height={400}
-    className="w-full h-full object-cover"
+    fill
+    className="object-cover z-0"
     priority
   />
-  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+  <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-8 z-10">
     <div className="text-center text-white">
-      <h1 className="text-4xl md:text-5xl font-bold">Amr Kalany</h1>
-      <p className="text-lg md:text-xl mt-2 text-neutral-200">Software Engineer</p>
+      <h1 className="text-5xl md:text-6xl font-bold">Amr Kalany</h1>
+      <p className="text-xl md:text-2xl mt-2 text-neutral-200">Software Engineer</p>
     </div>
   </div>
 </div>
+
 
 
 
