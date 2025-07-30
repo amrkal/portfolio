@@ -58,13 +58,6 @@ const featuredProjects = [
     github: 'https://github.com/amrkal/ElysianSoftech',
   },
   {
-    name: 'AdminPowerTrackApp',
-    image: '/placeholder.png',
-    description: 'Admin interface for the PowerTrack system, used for inventory and order management.',
-    tech: ['TypeScript'],
-    github: '',
-  },
-  {
     name: 'TennisCourt-BackEnd',
     image: '/placeholder.png',
     description: 'Python-based backend API for managing tennis court reservations and user data.',
