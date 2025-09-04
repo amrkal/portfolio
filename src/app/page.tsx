@@ -9,7 +9,7 @@ import Contact from './contact'
 import Projects from './projects'
 import Resume from './resume'
 import Skills from './skills'
-
+import { Analytics } from '@vercel/analytics/next';
 const navItems = [
   { name: 'Projects', href: '#projects' },
   { name: 'My Skills', href: '#skills' },
@@ -41,6 +41,7 @@ export default function Home() {
 
   return (
       <div className="min-h-screen flex bg-white text-neutral-900 font-sans scroll-smooth">
+                <Analytics />
         {/* Sidebar */}
         <aside className="w-64 fixed h-screen bg-neutral-900 text-white px-6 py-10 flex flex-col items-center justify-between shadow-md">
           <div className="flex flex-col items-center space-y-4">
